@@ -1,0 +1,331 @@
+/* ******************** navbar part start************************ */
+/* ******************** navbar part start************************ */
+nav{
+    /* background-color: aqua !important; */
+    background: linear-gradient(45deg,rgb(25, 25, 226),#554242);   
+}
+.menu{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    
+}
+.menu:hover{
+    color:red;
+    cursor: pointer;
+}
+/* ******************** navbar part Finish************************ */
+
+
+
+/* ******************** registration page**************** */
+.registration-container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+    background-image: url("./images/login-background.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.login-box{
+    padding: 15px;
+    text-align: center;
+    margin: 20px auto;
+    border: none;
+    box-shadow: 4px 4px 10px rgb(116, 111, 111);
+    border-radius: 10px;
+    width: 100%; /* Full width of the form container */
+    max-width: 400px; /* Limit maximum width */
+    box-sizing: border-box; /* Ensure padding and borders are included in width */
+}
+
+.login-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+    background-image: url("./images/login-background.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.login-form {
+    background: rgb(18, 31, 37);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+.login-box:hover {
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+    border: 2px solid #2edb34; /* Add border on hover */
+    background-color: #fcfcfc; /* Optional: Change background color on hover */
+}
+
+.error{
+    display: none;
+}
+/* *********************** Login page and Registraion pager er jabotio kaj shesh ******************* */
+
+
+
+/* ************************ banner section er kaj ************ */
+.hero-section{
+    min-height:60vh;
+    
+    background-image: url("./images/JWB-UK-10.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;     
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .hero-section{
+        min-height: 40vh;
+        background-image: url("./images/hero-section02.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;  
+    }
+    .hadding-text{
+        font-size: 25px !important;
+        padding: 50px !important;
+    }
+    
+}
+
+.adopt-btn{
+    padding: 10px;
+    margin-left:20px;
+    border: none;
+    border-radius:7px;
+    margin-bottom: 40px;
+    
+}
+.adopt-btn:hover{
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
+}
+
+@media(max-width: 575px) {
+    .hero-section{
+        min-height: 70vh;
+        background-image: url("./images/bird.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;  
+    }
+    .hadding-text{
+        font-size: 25px !important;
+        padding: 50px !important;
+    }
+    
+}
+
+
+.search-box{
+    width: 40%;
+    box-shadow: 4px 4px 8px gray;
+    padding:10px;
+    border-radius: 10px;
+    border: none;
+}
+.search-box:hover{
+    border: 2px solid green;
+}
+.bnr-box{
+    text-align: center;
+    padding-bottom: 60px;
+}
+.hadding-text{
+    text-align:left;
+    padding: 80px;
+    color: white;
+}
+.search-btn{
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+}
+.search-btn:hover {
+    color: #001F3F;
+    background-color: #fff;
+}
+
+/* ********************** banner section er kaj finish************************** */
+
+/* *********** Footer er kaj shuru ****************************** */
+.fotter-list{
+    list-style: none;
+    margin-top: 10px;
+    
+    
+}
+footer{
+    background: rgb(63, 63, 63);
+    padding: 50px;
+    color: white;
+    
+}
+.footer-text{
+    text-align: justify;
+}
+.social-img{
+    width: 25px;
+    margin-right: 10px;
+}
+
+/* **************** service section er kaj ********* */
+.service-section{
+    background-color:rgb(243, 239, 240);  
+    
+}
+.service-card{
+    width: 320px;
+    height: 350px;
+    border: 1px solid gray;
+    text-align:left;
+    padding: 15px;
+    border: none;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 10px;
+    background-color:#fcfcfc;
+    margin-bottom: 50px;
+}
+.service-img{
+    width: 100px;
+    margin-left: 80px;
+}
+.service-container{
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: center; 
+    /* background-color: rgb(196, 195, 195); */
+}
+.whyChoice-website{
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+@media(max-width: 575px) {
+    .choice-img{
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+.choice-heading{
+    text-align: center;
+    color: rgb(224, 154, 63);
+    padding: 40px;
+    font-family: revert-layer;
+    font-style: oblique;
+}
+.choice-heading2{
+    font-size:30px;
+    font-family:serif;
+    font-style:italic;
+    color: #554242;
+}
+.whyChoice-website{
+    color: rgb(199, 166, 166);
+}
+.choice-container{
+    background-color: whitesmoke;
+    padding-bottom: 80px;
+}
+
+.team-image{
+    width: 300px !important;
+}
+.card{
+    border-bottom-left-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
+    width: 302px;  
+}
+.team-member-container{
+    justify-content: center;
+    text-align: center;
+    padding: 80px;
+}
+.team-section{
+    background-color: #e0dddd;
+}
+
+/* ****************** Contact Us page er kaj ****************** */
+.contact-container{
+    background-image: url("./images/contact03.jpg");
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+       
+}
+.msg-body{
+    width: 400px;
+    box-sizing: calc(border-box);
+    border: none;
+    border-radius: 10px;
+}
+.contact-info{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    margin-bottom:120px;
+}
+.contact-form{ 
+    background-color: #b5c6d8;
+    padding: 20px;
+    border: none;
+    border-radius:10px;
+    
+}
+.contact-text{
+    color: white;
+    text-align: center;
+    line-height:0.4in;
+    margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+    .login-box {
+        width: 100%;        
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .msg-body{
+        width: 100%;
+        box-sizing: calc(border-box);
+        border: none;
+        border-radius: 10px;
+    }
+}
+/* ********************** Contact page er kaj sesh *************** */

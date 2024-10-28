@@ -1,0 +1,184 @@
+.category-pet{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.category-container{
+    height: 200px;
+    text-align: center;
+    padding-top: 20px;
+    /* background-color: rgb(219, 219, 240); */
+    background: linear-gradient(rgb(154, 154, 223), rgb(255, 250, 250));
+    border: none;
+}
+.pet-container{
+    text-align: center;
+    border: none;
+    background: linear-gradient(rgb(243, 239, 228),rgb(221, 238, 241));
+    
+}
+.cate-btn{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:bold;
+}
+.pet-card{
+    width: 300px;
+    height: 350px;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color:white;
+}
+.pet-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    padding-top: 10px;
+}
+.all-pet{
+    margin-top: 50px;
+    margin-left: 30px;
+    padding-bottom: 20px;
+    justify-content: center;
+}
+.detail-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -50px; /* Initially positioned outside the card */
+    right: 0px;
+    opacity: 0; /* Initially hidden */
+    transition: bottom 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+}
+.pet-card:hover .detail-btn {
+    bottom: 0px; /* Move to visible position */
+    opacity: 1;   /* Make it visible */
+}
+.loading img{
+    width: 100px;
+    height: 100px;
+}
+.loading{
+    display: none;
+}
+
+
+/* ************* Details Pet er kaj start ******************** */
+
+
+body{
+    background-color: rgb(224, 215, 215) !important;
+}
+.pet-and-info{
+    /* background-color: rgb(238, 225, 237); */
+    background: linear-gradient(rgb(231, 194, 194),rgb(103, 103, 216));
+    border-radius: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 30px;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.pet-image img{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    
+  
+}
+.pet-image{
+
+    width: 450px;
+    margin-top: 20px;
+    border-radius: 20px;
+    
+  
+}
+
+.pet-info{
+    width: 450px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 8px gray;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: sans-serif;
+    background-color: rgb(141, 85, 136);
+    
+}
+/* ************** Details Pet er kaj sesh *************** */
+
+.pet-update-container{
+    border: none;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    background: linear-gradient(90deg, #141e30, #243b55);
+}
+
+.update_form{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgb(231, 194, 194),rgb(103, 103, 216));
+    align-items: center;
+    /* margin-top: 50px; */
+    padding-top: 50px;
+    padding-bottom: 60px;
+    /* margin-bottom:50px; */
+    border-radius: 8px;
+}
+.update-box{
+    
+    padding:15px;
+    border: none;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 7px;
+    text-align: center;
+}
+.update-error{
+    width:50%;
+    padding:20px;
+    border: 1px solid ;
+    border: none;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 7px;
+    color: rgb(204, 7, 7);
+    text-align: center;
+    display:none;  
+}
+.update-massage{
+    width:50%;
+    padding:20px;
+    border: 1px solid ;
+    border: none;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 7px;
+    color: rgb(9, 131, 179);
+    text-align: center;
+    display:none; 
+}
+
+.review-container{
+    /* border: 1px solid red; */
+    padding: 30px;
+    background-color: #728397;
+    border-radius: 5px;
+}
+.review-box{
+    width: 50%;
+    padding:10px;
+    border-radius: 7px;
+}
+

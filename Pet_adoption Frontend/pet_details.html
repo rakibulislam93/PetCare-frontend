@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    
+</head>
+<body>
+    <!-- **************** Navbar******************* -->
+    <nav id="navbar">
+        <!-- navbar.js theke navbar asbe -->
+    </nav>
+
+
+    <div id="pet-details-container" class="pet-details-container">
+        
+    </div>
+
+    <!-- The Modal -->
+<div class="modal fade " id="addopt_error_msg" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel">Massage</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- Modal Body -->
+            <div id="adopt_massage" class="adopt_massage p-3">
+                
+            </div>
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- pet adopotion er somoi error dekhabo -->
+    <h5 id="adopt-error" class="text-center p-2"> </h5>
+
+
+    <div class="review-container container">
+        <!-- review add korar por massage dibo -->
+        <p id="review_msg"></p>
+        <form onsubmit="AddReview(event)">
+            <b>Body</b><br>
+            <textarea class="review-box" name="" id="review-body" required></textarea> <br>
+            <b>Ratting</b><br>
+            <select class="review-box" name="ratting" id="ratting">
+                <option value="⭐">⭐</option>
+                <option value="⭐⭐">⭐⭐</option>
+                <option value="⭐⭐⭐">⭐⭐⭐</option>
+                <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+                <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+                
+            </select> <br>
+            <input type="hidden" id="review_petId">
+            <button type="submit" class="btn btn-primary mt-2">Add Review</button>
+        </form>
+    </div>
+
+    <!-- **************** Bootstrap modal for delete ************ -->
+    <div id="deleteModal" class="modal" tabindex="-1">
+        
+        <div class="modal-dialog">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <h5 id="delmodal_tittle" class="modal-title"></h5>
+              
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p id="pet-del-error"> </p> 
+              <h5>Are you sure delete this pet...?</h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" id="pet_del_btn">Confirm Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <section class="team-section">
+        <div class="team-member-container container">
+            <h2 style="font-family: serif;"><span style="color: rgb(255, 166, 0);">Client</span><span class="text-danger">'</span>s Review</h2>
+            <p id="count_review"></p>
+            <div class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein slider-item-first-visible">
+                <ul id="per_pet_review" class="slider-container  py-4">
+                    <!-- <li class="slide-visible">
+                        <div class="card shadow">
+                            <div class="ratio ratio-16x9">
+                                <img class="team-image" src="./images/team-3.jpeg" class="card-img-top" loading="lazy" alt="...">
+                            </div>
+                            <div class="card-body p-3 p-xl-5">
+                                <h3 class="card-title h5">Nikita Jahan</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slide-visible">
+                        <div class="card shadow h-100">
+                            <div class="ratio ratio-16x9">
+                                <img class="team-image"  src="./images/team-1.jpeg" class="card-img-top" loading="lazy" alt="...">
+                            </div>
+                            <div class="card-body p-3 p-xl-5">
+                                <h3 class="card-title h5">Shafin Hossain</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="card shadow h-100">
+                            <div class="ratio ratio-16x9">
+                                <img class="team-image"  src="./images/team-4.jpeg" class="card-img-top" loading="lazy" alt="...">
+                            </div>
+                            <div class="card-body p-3 p-xl-5">
+                                <h3 class="card-title h5">Safiya Khanam</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="card shadow h-100">
+                            <div class="ratio ratio-16x9">
+                                <img class="team-image"  src="./images/team-2.jpeg" class="card-img-top" loading="lazy" alt="...">
+                            </div>
+                            <div class="card-body  p-3 p-xl-5">
+                                <h3 class="card-title h5">Rakibul Hasan</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="card shadow h-100">
+                            <div class="ratio ratio-16x9">
+                                <img class="team-image"  src="./images/team-1.jpeg" class="card-img-top" loading="lazy" alt="...">
+                            </div>
+                            <div class="card-body  p-3 p-xl-5">
+                                <h3 class="card-title h5">Mahmudul Hasan</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
+            
+                <button type="button" class="slider-nav" aria-label="Go left"></button>
+                <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+            
+                <div class="slider-indicators">
+                    <button class="active" aria-label="Go to slide"></button>
+                    <button aria-label="Go to slide" class=""></button>
+                    <button aria-label="Go to slide" class=""></button>
+                    <button aria-label="Go to slide" class=""></button>
+                    <button aria-label="Go to slide" class=""></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ************** Footer ************** -->
+    <footer class="p-5">
+        <div class="row text-center mb-5">
+          <div class="col-md-4">
+            <h5>B<span class="text-danger">'</span>dShoP</h5>
+            <p class="footer-text">At BdShop, we are committed to offering high-quality products that meet your needs. With a wide range of items, from essentials to exclusive finds, we aim to make shopping simple and enjoyable. Discover the difference in every purchase!"</p>
+            <h4>Follow Us</h4>
+            <div class="mt-3">
+                <a href=""><img class="social-img" src="./images/facebook.png" alt=""></a>
+                <a href=""><img class="social-img" src="./Images/LinkedIn.png" alt=""></a>
+                <a href=""><img class="social-img" src="./Images/instagram (1).png" alt=""></a>
+                <a href=""><img class="social-img" src="./Images/twitter.png" alt=""></a>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <h5 class="mt-2">QUICKLINKS</h5>
+            <li class="fotter-list">About Us</li>
+            <li class="fotter-list">Contact Us</li>
+            <li class="fotter-list">News Center</li>
+            <li class="fotter-list">FAQs</li>
+            <li class="fotter-list mb-3">Partnerships</li>
+          </div>
+          <div class="col-md-4">
+            <h5 class="mt-2">GET INVOLVED</h5>
+            <li class="fotter-list">AdoptiongPets</li>
+            <li class="fotter-list">Shelter & Rescue</li>
+            <li class="fotter-list">Dog adoption</li>
+            <li class="fotter-list">Cat adoption</li>
+            <li class="fotter-list">Other types of pets</li>
+          </div>
+          </div>
+          <hr>
+          <p class="text-center mt-3">
+            <small>Copyright © BdShop. All Rights Reserved</small>
+          </p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="home.js"></script>
+    <script src="./navbar.js"></script>
+    
+</body>
+</html>
